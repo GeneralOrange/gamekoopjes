@@ -32,5 +32,17 @@
 
 <?php wp_footer(); ?>
 
+<?php if ( get_field( 'google_analytics_id', 'option' ) ) { ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php the_field( 'google_analytics_id', 'option' ); ?>"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '<?php the_field( 'google_analytics_id', 'option' ); ?>');
+    </script>
+<?php } ?>
+
 </body>
 </html>

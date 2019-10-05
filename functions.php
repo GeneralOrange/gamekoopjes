@@ -122,7 +122,7 @@ add_action( 'widgets_init', 'gamekoopjes_widgets_init' );
 function gamekoopjes_scripts() {
 	wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Lato');
 
-	wp_enqueue_style( 'gamekoopjes-style', get_template_directory_uri() . '/assets/dist/css/style.css', '', '', true);
+	wp_enqueue_style( 'gamekoopjes-style', get_template_directory_uri() . '/assets/dist/css/style.css', '', '');
 
 	wp_enqueue_script( 'gamekoopjes-js', get_template_directory_uri() . '/assets/dist/js/app.js', '','', true);
 
@@ -163,6 +163,12 @@ require_once get_template_directory() . '/inc/tgm-plugins.php';
  * Include Activate ACF
  */
 require_once get_template_directory() . '/inc/activate-plugin.php';
+
+/**
+ * Include navwalker
+ */
+
+require_once get_template_directory() . '/inc/navwalker.php';
 
 /**
  * Load Jetpack compatibility file.

@@ -35,3 +35,44 @@ function gamekoopjes_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'gamekoopjes_pingback_header' );
+
+
+/**
+ * Added by General Orange
+ */
+
+
+/**
+ * Gets custom logo
+ */
+
+function get_logo() {
+	//Init output
+	$output = '';
+
+	//Get logo data from backend
+	$logo = get_field('site_logo', 'option');
+
+	//Create html markup if logo exists in backend
+	if($logo):
+		$output .= '<a href="'.get_site_url().'">';
+
+		$output .= '<img class="img-fluid lazyload site_logo" data-src="'.$logo['url'].'" alt="'.$logo['alt'].'">';
+
+		$output .= '</a>';
+	endif;
+	//Return output
+	return $output;
+}
+
+function get_favicon() {
+	$output = '';
+
+	$favicon = get_field( 'favicon', 'option' );
+		if ($favicon):
+			//Use the custom logo from the backend
+			$output .= '<link rel="shortcut icon" href="'.$favicon['url'].'" >';
+		endif;
+
+	return $output;
+}

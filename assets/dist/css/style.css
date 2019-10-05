@@ -10650,5 +10650,17 @@ body {
   line-height: 24px;
 }
 
+nav {
+  background-color: purple;
+}
+
+nav .site_logo {
+  max-width: 250px;
+}
+
+nav .nav-link {
+  color: white;
+}
+
 
 /*# sourceMappingURL=style.css.map*/

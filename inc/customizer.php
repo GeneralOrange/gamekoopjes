@@ -53,3 +53,27 @@ function gamekoopjes_customize_preview_js() {
 	wp_enqueue_script( 'gamekoopjes-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'gamekoopjes_customize_preview_js' );
+
+/**
+ * Include theme options
+ */
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Site Options',
+		'menu_title'	=> 'Site Options',
+		'menu_slug' 	=> 'site-options',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+    
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Header Options',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'site-options',
+	));
+
+
+	
+}
