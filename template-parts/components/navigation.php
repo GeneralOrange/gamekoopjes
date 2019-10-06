@@ -1,4 +1,16 @@
-<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg navbar-light">
+<?php
+    $topbar = get_field('topbar', 'option');
+    
+    if($topbar):
+        ?>
+        <div class="topbar">
+            <p><?= strip_tags($topbar['content']); ?> <a class="button" href="<?= $topbar['button']['url']; ?>"><?= $topbar['button']['title']; ?></a></p>
+        </div>
+        <?php
+    endif;
+?>
+<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg">
+    <div class="overlay"></div>
     <div class="container">
         <div class="site-branding">
             <?php

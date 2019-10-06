@@ -1,0 +1,15 @@
+@mixin button($bg-color: nth($colors, 1), $color: white){
+    background-color: $bg-color;
+    color: $color;
+    border-radius: 17.5px;
+    padding: 5px 30px;
+    transition: all .3s;
+    display: inline-block;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        filter: brightness(95%);
+        transform: scale(.95);
+    }
+}

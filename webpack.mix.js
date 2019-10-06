@@ -39,9 +39,9 @@ mix.webpackConfig( {
 mix.setPublicPath('./assets/');
 
 mix.js('./assets/js/app.js', 'dist/js')
-//.js('./assets/js/app-backend.js', 'dist/js')
+.js('./assets/js/vendor.js', 'dist/js')
 .sass('./assets/sass/style.scss', 'dist/css')
-//.sass('./assets/sass/style-backend.scss', 'dist/css')
+.sass('./assets/sass/vendor.scss', 'dist/css')
 .sourceMaps(true, 'source-map');
 
 mix.browserSync({

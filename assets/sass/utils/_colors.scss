@@ -1,11 +1,20 @@
 //Main color palette
 $colors: (
-    'light-blue', #0db4b9,
-    #ce3095,
-    #b5267b,
-    #111111,
-    #acacac,
-    #eeeeee,
-    #ffffff,
-    #1d1045
+    #0db4b9, //1
+    #ce3095, //2
+    #b5267b, //3
+    #111111, //4
+    #acacac, //5
+    #eeeeee, //6
+    #ffffff, //7
+    #1d1045 //8
+);
+
+$gradients: (
+    (
+        nth($colors, 1), nth($colors, 8)
+    ),
+    (
+        ''
+    )
 )
