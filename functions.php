@@ -120,8 +120,6 @@ add_action( 'widgets_init', 'gamekoopjes_widgets_init' );
  * Enqueue scripts and styles.
  */
 function gamekoopjes_scripts() {
-	wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Lato');
-
 	wp_enqueue_style( 'gamekoopjes-vendors', get_template_directory_uri(). '/assets/dist/css/vendor.css', '', '');
 	wp_enqueue_style( 'gamekoopjes-style', get_template_directory_uri() . '/assets/dist/css/style.css', '', '');
 

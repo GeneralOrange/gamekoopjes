@@ -11,6 +11,7 @@
 ?>
 <nav id="site-navigation" class="main-navigation navbar navbar-expand-lg">
     <div class="overlay"></div>
+    <div class="overlay_2"></div>
     <div class="container">
         <div class="site-branding">
             <?php

@@ -1,3 +1,15 @@
+/* lazyload animation */
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 18px;
@@ -27,6 +39,12 @@ header .topbar {
   color: white;
   background-color: #ce3095;
   padding: 10px 0;
+  transition: transform 0.3s;
+  transform: translateY(-100%);
+}
+
+header .topbar.toggled {
+  transform: translateY(0%);
 }
 
 header .topbar p {
@@ -56,11 +74,24 @@ header .overlay {
   width: 100%;
   height: 700px;
   background-image: linear-gradient(to right, #0db4b9, #1d1045);
-  top: 0;
+  top: -54px;
   left: 0;
   z-index: -1;
   -webkit-clip-path: polygon(0% 100%, 100% 44%, 100% 0%, 0% 0%);
           clip-path: polygon(0% 100%, 100% 44%, 100% 0%, 0% 0%);
+}
+
+header .overlay_2 {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  background-image: linear-gradient(to right, #0db4b9, #1d1045);
+  top: -40px;
+  left: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(0% 100%, 100% 44%, 100% 0%, 0% 0%);
+          clip-path: polygon(0% 100%, 100% 44%, 100% 0%, 0% 0%);
+  opacity: 0.5;
 }
 
 

@@ -96,8 +96,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/menu */ "./assets/js/components/menu.js");
-/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_menu__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_topbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/topbar */ "./assets/js/components/topbar.js");
 //Components
+
 
 
 /***/ }),
@@ -106,9 +107,12 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************************!*\
   !*** ./assets/js/components/menu.js ***!
   \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Menu; });
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Menu = function Menu() {
@@ -117,7 +121,38 @@ var Menu = function Menu() {
   return console.log('test123');
 };
 
+
 new Menu();
+
+/***/ }),
+
+/***/ "./assets/js/components/topbar.js":
+/*!****************************************!*\
+  !*** ./assets/js/components/topbar.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return TopBar; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var TopBar = function TopBar() {
+  _classCallCheck(this, TopBar);
+
+  var toggleTopbar = function toggleTopbar() {
+    var topbar = document.querySelector('.topbar');
+    setTimeout(function () {
+      topbar.classList.add('toggled');
+    }, 200);
+  };
+
+  return toggleTopbar();
+};
+
+
+new TopBar();
 
 /***/ }),
 

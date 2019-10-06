@@ -1,4 +1,4 @@
-class Menu {
+export default class Menu {
     constructor() {
         return console.log('test123');
     }

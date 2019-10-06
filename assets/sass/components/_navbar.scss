@@ -26,6 +26,12 @@ header {
         color: white;
         background-color: nth($colors, 2);
         padding: 10px 0;
+        transition: transform .3s;
+        transform: translateY(-100%);
+
+        &.toggled {
+            transform: translateY(0%);
+        }
     
         p {
             margin: 0;
@@ -42,9 +48,21 @@ header {
         width: 100%;
         height: 700px;
         background-image: linear-gradient(to right, nth($gradients, 1));
-        top: 0;
+        top: -54px;
         left: 0;
         z-index: -1;
         clip-path: polygon(0% 100%, 100% 44%, 100% 0%, 0% 0%);
+    }
+
+    .overlay_2 {
+        position: absolute;
+        width: 100%;
+        height: 700px;
+        background-image: linear-gradient(to right, nth($gradients, 1));
+        top: -40px;
+        left: 0;
+        z-index: -1;
+        clip-path: polygon(0% 100%, 100% 44%, 100% 0%, 0% 0%);
+        opacity: .5;
     }
 }

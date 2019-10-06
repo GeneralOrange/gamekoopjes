@@ -1,0 +1,9 @@
+/* lazyload animation */
+.lazyload, .lazyloading { 
+    opacity: 0; 
+}
+.lazyloaded { 
+    opacity: 1; 
+    -webkit-transition: opacity 0.5s ease; 
+    transition: opacity 0.5s ease; 
+}
