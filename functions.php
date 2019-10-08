@@ -179,7 +179,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 function google_tag_mananger_body_open() {
-	$gtm = get_field( 'google_tagmanager_id', 'option' )
+	$gtm = get_field( 'google_tagmanager_id', 'option' );
 
 	if ($gtm) :
 		echo '<!-- Google Tag Manager (noscript) -->
