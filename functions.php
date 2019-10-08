@@ -179,10 +179,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 function google_tag_mananger_body_open() {
-	echo '<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKJB9ZW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->';
+	$gtm = get_field( 'google_tagmanager_id', 'option' )
+
+	if ($gtm) :
+		echo '<!-- Google Tag Manager (noscript) -->
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id='.$gtm.'"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			<!-- End Google Tag Manager (noscript) -->';
+	endif;
 }
 
 add_filter( 'wp_body_open', 'google_tag_mananger_body_open' );
