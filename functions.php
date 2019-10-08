@@ -182,7 +182,7 @@ function google_tag_mananger_body_open() {
 	echo '<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKJB9ZW"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->'
+<!-- End Google Tag Manager (noscript) -->';
 }
 
 add_filter( 'wp_body_open', 'google_tag_mananger_body_open' );
