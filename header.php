@@ -19,8 +19,13 @@
 
 	<title><?php echo get_bloginfo( 'name' ); ?> - <?php echo get_bloginfo( 'description' ); ?></title>
 
-	<!-- Favicon -->
-	<?php echo get_favicon(); ?>
+	<?php
+		//Favicon
+		echo get_favicon();
+
+		//Landingpage redirection
+		landing_page_redirect();
+	?>
 
 	<?php wp_head(); ?>
 

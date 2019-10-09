@@ -65,4 +65,13 @@ header {
         clip-path: polygon(0% 100%, 100% 44%, 100% 0%, 0% 0%);
         opacity: .5;
     }
+
+    .overlay, .overlay_2 {
+        transition: transform 1s;
+        transform: translate(-100%, -100%) scale(0);
+
+        &.toggled {
+            transform: translate(0%, 0%);
+        }
+    }
 }

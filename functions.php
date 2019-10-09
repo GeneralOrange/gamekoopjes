@@ -190,3 +190,8 @@ function google_tag_mananger_body_open() {
 }
 
 add_filter( 'wp_body_open', 'google_tag_mananger_body_open' );
+
+
+//Disable godawfull gutenberg
+
+add_filter('use_block_editor_for_post', '__return_false', 10);

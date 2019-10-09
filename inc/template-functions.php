@@ -76,3 +76,36 @@ function get_favicon() {
 
 	return $output;
 }
+
+function landing_page_redirect(){
+	//Get pages with landing page template attached
+	$lpages = get_pages([
+		'meta_key' => '_wp_page_template',
+		'meta_value' => 'page-templates/landing-page.php'
+	]);
+
+	//Init variable
+	$dpages = [];
+
+	//Loop through found pages
+	foreach($lpages as $item):
+		//Get ACF field
+		$redirect = get_field('force_site_redirection', $item);
+
+		//Check ACF field
+		if($redirect):
+			$dpages[] = $item;
+		endif;
+
+	endforeach;
+
+	//Only get first record since there should only be 1 redirecting
+	if($dpages[0]):
+		$link = get_the_permalink($dpages[0]);
+	endif;
+
+	//Localize script to JS
+	wp_localize_script('gamekoopjes-js', 'ipAjaxVar', [
+		'redirect' => $link
+	]);
+}
