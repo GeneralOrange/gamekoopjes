@@ -99,13 +99,18 @@ function landing_page_redirect(){
 
 	endforeach;
 
+	$current_page = get_the_permalink($post->ID);
+
 	//Only get first record since there should only be 1 redirecting
 	if($dpages[0]):
 		$link = get_the_permalink($dpages[0]);
+
+		if($current_page !== $link):
+			//Handle redirect
+			wp_redirect($link, 307);
+		endif;
 	endif;
 
-	//Localize script to JS
-	wp_localize_script('gamekoopjes-js', 'ipAjaxVar', [
-		'redirect' => $link
-	]);
+	
+	
 }

@@ -95,12 +95,9 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utils_landing_redirection__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/landing_redirection */ "./assets/js/utils/landing_redirection.js");
-/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/menu */ "./assets/js/components/menu.js");
-/* harmony import */ var _components_topbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/topbar */ "./assets/js/components/topbar.js");
-//Utils
- //Components
-
+/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/menu */ "./assets/js/components/menu.js");
+/* harmony import */ var _components_topbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/topbar */ "./assets/js/components/topbar.js");
+//Components
 
 
 
@@ -159,7 +156,7 @@ var Menu = function Menu() {
   _classCallCheck(this, Menu);
 
   new _banner__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  return console.log('test123');
+  return;
 };
 
 
@@ -194,32 +191,6 @@ var TopBar = function TopBar() {
 
 
 new TopBar();
-
-/***/ }),
-
-/***/ "./assets/js/utils/landing_redirection.js":
-/*!************************************************!*\
-  !*** ./assets/js/utils/landing_redirection.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LandingPage; });
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var LandingPage = function LandingPage() {
-  _classCallCheck(this, LandingPage);
-
-  var handleRedirect = function handleRedirect() {//var landingpage;
-  };
-
-  return handleRedirect();
-};
-
-
-new LandingPage();
 
 /***/ }),
 

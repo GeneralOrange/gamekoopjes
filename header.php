@@ -25,9 +25,12 @@
 
 		//Landingpage redirection
 		landing_page_redirect();
+		
+		//Load wp head
+		wp_head();
+		
+		
 	?>
-
-	<?php wp_head(); ?>
 
 	<?php if ( get_field( 'google_tagmanager_id', 'option' ) ) { ?>
 	<!-- Google Tag Manager -->
