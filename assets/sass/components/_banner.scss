@@ -1,0 +1,65 @@
+.banner_content {
+    color: white;
+
+    .page-title {
+        transition: all 1s;
+        transform: translateX(-100%);
+        opacity: 0;
+        &.toggled {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+
+    .page-subtitle {
+        transition: all 1s;
+        transform: translateX(-100%);
+        opacity: 0;
+        &.toggled {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+
+    p {
+        font-size: 20px;
+        transition: all 1s;
+        transform: translateX(-100%);
+        opacity: 0;
+        margin-bottom: 30px;
+        
+        &.toggled {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+
+    .button {
+        @include button(nth($colors, 2));
+        transition: all 1s;
+        transform: translateX(-100%);
+        opacity: 0;
+
+        &.toggled {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+
+    .img_container {
+        text-align: right;
+        .side-img {
+            transition: all 1s;
+            transform: translateX(100%);
+            opacity: 0;
+            margin-left: auto;
+    
+            &.toggled {
+                opacity: 1;
+                transform: translateX(0%);
+            }
+        }
+    }
+
+    
+}

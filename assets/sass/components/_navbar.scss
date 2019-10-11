@@ -46,7 +46,7 @@ header {
     .overlay {
         position: absolute;
         width: 100%;
-        height: 700px;
+        height: 1000px;
         background-image: linear-gradient(to right, nth($gradients, 1));
         top: -54px;
         left: 0;
@@ -57,7 +57,7 @@ header {
     .overlay_2 {
         position: absolute;
         width: 100%;
-        height: 700px;
+        height: 1000px;
         background-image: linear-gradient(to right, nth($gradients, 1));
         top: -40px;
         left: 0;
@@ -72,6 +72,12 @@ header {
 
         &.toggled {
             transform: translate(0%, 0%);
+        }
+    }
+
+    .site-branding {
+        &.landing-branding {
+            margin: 0 auto;
         }
     }
 }

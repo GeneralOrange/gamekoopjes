@@ -97,7 +97,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/menu */ "./assets/js/components/menu.js");
 /* harmony import */ var _components_topbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/topbar */ "./assets/js/components/topbar.js");
+/* harmony import */ var _components_subscribe__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/subscribe */ "./assets/js/components/subscribe.js");
 //Components
+
 
 
 
@@ -130,7 +132,23 @@ var Banner = function Banner() {
     });
   };
 
-  return animateBanner();
+  var animateBannerImage = function animateBannerImage() {
+    var image = document.querySelector('.side-img');
+    setTimeout(function () {
+      image.classList.add('toggled');
+    }, 600);
+  };
+
+  var animateText = function animateText() {
+    var banner = document.querySelector('.banner_content .col-md-6');
+    Array.from(banner.children).forEach(function (val, i) {
+      setTimeout(function () {
+        val.classList.add('toggled');
+      }, 800 + 400 * i);
+    });
+  };
+
+  return [animateBanner(), animateBannerImage(), animateText()];
 };
 
 
@@ -164,6 +182,46 @@ new Menu();
 
 /***/ }),
 
+/***/ "./assets/js/components/subscribe.js":
+/*!*******************************************!*\
+  !*** ./assets/js/components/subscribe.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Subscribe; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Subscribe = function Subscribe() {
+  _classCallCheck(this, Subscribe);
+
+  function handleToggleImage(e) {
+    e.preventDefault();
+    var complete = subscribe.complete.url,
+        before = subscribe.before.url;
+
+    if (this.src !== before) {
+      this.src = before;
+    } else {
+      this.src = complete;
+    }
+  }
+
+  var handleImage = function handleImage() {
+    var main_image = document.querySelector('.subscribe_box__image');
+    return main_image.addEventListener('click', handleToggleImage);
+  };
+
+  return handleImage();
+};
+
+
+new Subscribe();
+
+/***/ }),
+
 /***/ "./assets/js/components/topbar.js":
 /*!****************************************!*\
   !*** ./assets/js/components/topbar.js ***!
@@ -181,9 +239,12 @@ var TopBar = function TopBar() {
 
   var toggleTopbar = function toggleTopbar() {
     var topbar = document.querySelector('.topbar');
-    setTimeout(function () {
-      topbar.classList.add('toggled');
-    }, 200);
+
+    if (topbar) {
+      setTimeout(function () {
+        topbar.classList.add('toggled');
+      }, 200);
+    }
   };
 
   return toggleTopbar();

@@ -18,6 +18,30 @@ export default class Banner {
             });
         }
 
-        return animateBanner();
+        const animateBannerImage = () => {
+            const
+            image = document.querySelector('.side-img');
+
+            setTimeout(()=> {
+                image.classList.add('toggled');
+            }, 600);
+        }
+
+        const animateText = () => {
+            const
+            banner = document.querySelector('.banner_content .col-md-6');
+
+            Array.from(banner.children).forEach((val, i) => {
+                setTimeout(()=> {
+                    val.classList.add('toggled');
+                }, 800 + 400 * i);
+            });
+        }
+
+        return [
+            animateBanner(),
+            animateBannerImage(),
+            animateText()
+        ];
     }
 }

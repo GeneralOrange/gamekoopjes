@@ -52,6 +52,12 @@ function get_logo() {
 
 	//Get logo data from backend
 	$logo = get_field('site_logo', 'option');
+	$alt_logo = get_field('alt_site_logo', 'option');
+
+	//If we land on landingpage change the logo
+	if(is_page_template('page-templates/landing-page.php') && $alt_logo):
+		$logo = $alt_logo;
+	endif;
 
 	//Create html markup if logo exists in backend
 	if($logo):

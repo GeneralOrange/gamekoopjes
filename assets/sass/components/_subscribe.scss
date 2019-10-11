@@ -1,0 +1,42 @@
+.subscribe_box {
+    margin: 150px auto;
+
+    &__image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: auto;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        transition: all .3s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(.99);
+        }
+    }
+
+    &__inner {
+        position: relative;
+        width: 80%;      
+        min-height: 720px;
+        margin: 0 auto;
+        border-radius: 5px;
+        box-shadow: 0px 6px 12px 0 rgba(29, 16, 69, 0.25);
+        background-color: white;
+        padding: 40px;
+        padding-left: 350px;
+    }
+
+    &__title {
+        display: inline-block;
+        background-image: linear-gradient(to right, nth($gradients, 1)), linear-gradient(to top, nth($gradients, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__button {
+        @include button(nth($colors, 2));
+    }
+}

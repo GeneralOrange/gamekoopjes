@@ -1,11 +1,59 @@
 {
-    "key": "group_5d990ce92663e",
-    "title": "Site options",
+    "key": "group_5da0f5c461c80",
+    "title": "Subscribe box options",
     "fields": [
         {
-            "key": "field_5d99254214460",
-            "label": "Google Tagmanager",
-            "name": "google_tagmanager_id",
+            "key": "field_5da0fcd3871f0",
+            "label": "Image before",
+            "name": "subscribe_box_image_before",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5da0f5d3a4619",
+            "label": "Image complete",
+            "name": "subscribe_box_image_complete",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5da0f5f2a461a",
+            "label": "Title",
+            "name": "subscribe_box_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,34 +70,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d990d3c23534",
-            "label": "Site logo",
-            "name": "site_logo",
-            "type": "image",
-            "instructions": "Plaats hier je site logo",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5da0d2924bf6d",
-            "label": "Alt site logo",
-            "name": "alt_site_logo",
-            "type": "image",
+            "key": "field_5da0f600a461b",
+            "label": "Description",
+            "name": "subscribe_box_description",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -58,58 +82,29 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5d992459780df",
-            "label": "Favicon",
-            "name": "favicon",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "site-options"
+                "value": "page-templates\/landing-page.php"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1570820808
+    "modified": 1570831608
 }

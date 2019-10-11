@@ -49,7 +49,7 @@
 
 	<header id="masthead" class="site-header">
 		<?php
-			get_template_part('template-parts/components/navigation');
+			get_template_part('template-parts/components/header/navigation');
 		?>
 	</header><!-- #masthead -->
 
