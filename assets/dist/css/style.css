@@ -50,7 +50,7 @@ header nav {
 }
 
 header nav .site_logo {
-  max-width: 250px;
+  max-width: 200px;
 }
 
 header nav .menu-item {
@@ -227,7 +227,10 @@ header .site-branding.landing-branding {
 }
 
 .subscribe_box {
-  margin: 150px auto;
+  margin: 300px auto;
+  background-image: url("/wp-content/uploads/2019/10/background-controller.png");
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 .subscribe_box__image {
@@ -258,8 +261,13 @@ header .site-branding.landing-branding {
   padding-left: 350px;
 }
 
+.subscribe_box__content {
+  padding: 35px;
+}
+
 .subscribe_box__title {
   display: inline-block;
+  font-size: 48px;
   background-image: linear-gradient(to right, #0db4b9, #1d1045), linear-gradient(to top, #0db4b9, #1d1045);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
