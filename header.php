@@ -28,6 +28,12 @@
 		
 		//Load wp head
 		wp_head();
+
+		//Localize bdi
+		wp_localize_script('gamekoopjes-js', 'background', [
+			'controller' => bdi('background-controller.png'),
+			'controller_2' => bdi('background-controller-2.png')
+		]);
 		
 		
 	?>

@@ -116,7 +116,9 @@ function landing_page_redirect(){
 			wp_redirect($link, 307);
 		endif;
 	endif;
+}
 
-	
-	
+//Before default image
+function bdi($extend = NULL) {
+	return get_bloginfo('stylesheet_directory').'/assets/dist/images/'.$extend;
 }

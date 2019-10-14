@@ -95,13 +95,52 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/menu */ "./assets/js/components/menu.js");
-/* harmony import */ var _components_topbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/topbar */ "./assets/js/components/topbar.js");
-/* harmony import */ var _components_subscribe__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/subscribe */ "./assets/js/components/subscribe.js");
-//Components
+/* harmony import */ var _base_background__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./base/background */ "./assets/js/base/background.js");
+/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/menu */ "./assets/js/components/menu.js");
+/* harmony import */ var _components_topbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/topbar */ "./assets/js/components/topbar.js");
+/* harmony import */ var _components_subscribe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/subscribe */ "./assets/js/components/subscribe.js");
+//Base
+ //Components
 
 
 
+
+
+/***/ }),
+
+/***/ "./assets/js/base/background.js":
+/*!**************************************!*\
+  !*** ./assets/js/base/background.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Background; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Background = function Background() {
+  _classCallCheck(this, Background);
+
+  var handleBackground = function handleBackground() {
+    var main = document.querySelector('#main');
+    var controller, i, src_arr;
+    src_arr = [background.controller, background.controller_2];
+
+    for (i = 0; i < 2; i++) {
+      controller = document.createElement('img');
+      controller.classList.add('background_controller', 'lazyload');
+      controller.setAttribute('data-src', src_arr[i]);
+      main.appendChild(controller);
+    }
+  };
+
+  return handleBackground();
+};
+
+
+new Background();
 
 /***/ }),
 
