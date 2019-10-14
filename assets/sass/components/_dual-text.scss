@@ -1,0 +1,40 @@
+.dual_text {
+    &__inner {
+        width: 80%;
+        margin: 0 auto;
+
+        .col-md-6 {
+            &:first-of-type {
+                border-right: 1px solid nth($colors, 8);
+            }
+        }
+    }
+    .icon {
+        width: 50px;
+        height: auto;
+
+        &__container {
+            background-color: nth($colors, 1);
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    .title {
+        display: inline-block;
+
+        h4 {
+            text-transform: uppercase;
+            background-image: linear-gradient(to right, nth($gradients, 1)), linear-gradient(to top, nth($gradients, 1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    
+}
