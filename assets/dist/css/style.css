@@ -316,6 +316,20 @@ header .site-branding.landing-branding {
   transform: scale(0.95);
 }
 
+.subscribe_box_content__form {
+  padding-top: 30px;
+}
+
+.subscribe_box_content__form input {
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px !important;
+}
+
+.subscribe_box_content__form label {
+  font-size: 14px;
+}
+
 .dual_text__inner {
   width: 80%;
   margin: 0 auto;

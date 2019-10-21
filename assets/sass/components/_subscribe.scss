@@ -33,6 +33,7 @@
 
     &__content {
         padding: 35px;
+
     }
 
     &__title {
@@ -45,5 +46,22 @@
 
     &__button {
         @include button(nth($colors, 2));
+    }
+
+}
+
+.subscribe_box_content {
+    &__form {
+        padding-top:30px;
+
+        input {
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+            font-size:14px !important;            
+        }
+
+        label {
+            font-size: 14px;
+        }
     }
 }

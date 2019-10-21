@@ -24,7 +24,6 @@ wp_localize_script('gamekoopjes-js', 'subscribe', [
                     <?php gravity_form( 1, false, false, false, '', false ); ?>
                 </div>
 
-                <a class="subscribe_box__button" href="#">Inschrijven</a>
             </div>
             
 

@@ -122,3 +122,9 @@ function landing_page_redirect(){
 function bdi($extend = NULL) {
 	return get_bloginfo('stylesheet_directory').'/assets/dist/images/'.$extend;
 }
+
+
+add_filter( 'gform_submit_button_1', 'gk_change_form_button', 10, 2 );
+function gk_change_form_button( $button, $form ) {
+    return "<button class='subscribe_box__button' id='gform_submit_button_{$form['id']}'><span>Inschrijven</span></button>";
+}

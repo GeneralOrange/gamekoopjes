@@ -18620,7 +18620,7 @@ module.exports = g;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! E:\Xampp\htdocs\wp-gamekoopjes\wp-content\themes\gamekoopjes\assets\js\vendor.js */"./assets/js/vendor.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\gamekoopjes\wp-content\themes\gamekoopjes\assets\js\vendor.js */"./assets/js/vendor.js");
 
 
 /***/ })
