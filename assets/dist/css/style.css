@@ -335,8 +335,15 @@ header .site-branding.landing-branding {
   margin: 0 auto;
 }
 
+.dual_text .icon-1 {
+  width: 55px;
+}
+
+.dual_text .icon-2 {
+  width: 40px;
+}
+
 .dual_text .icon {
-  width: 50px;
   height: auto;
 }
 

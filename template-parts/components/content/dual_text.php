@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="icon__container">
-                        <img class="lazyload icon img-fluid" data-src="<?= bdi('controller.png'); ?>" alt="">
+                        <img class="lazyload icon icon-1 img-fluid" data-src="<?= bdi('controller.png'); ?>" alt="">
                     </div>
 
                     <div class="title">
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="icon__container">
-                        <img class="lazyload icon img-fluid" data-src="<?= bdi('lint-usp.png'); ?>" alt="">
+                        <img class="lazyload icon icon-2 img-fluid" data-src="<?= bdi('lint-usp.png'); ?>" alt="">
                     </div>
 
                     <div class="title">
