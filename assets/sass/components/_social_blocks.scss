@@ -1,0 +1,44 @@
+.social_blocks {
+    margin: 100px auto;
+
+    &__link {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__item {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0px 6px 12px 0 rgba(29, 16, 69, 0.25);
+        min-height: 225px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        transition: all .3s;
+
+        &:hover {
+            transform: scale(.95);
+            filter: brightness(95%);
+            cursor: pointer;
+
+            .social_blocks {
+                &__icon {
+                    animation: shake 4s cubic-bezier(.20,.07,.19,.97) infinite;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        margin-bottom: 15px;
+    }
+
+    &__channel {
+        background-image: linear-gradient(to right, nth($gradients, 1)), linear-gradient(to top, nth($gradients, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

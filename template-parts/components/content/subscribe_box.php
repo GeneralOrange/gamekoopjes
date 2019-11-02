@@ -11,7 +11,7 @@ wp_localize_script('gamekoopjes-js', 'subscribe', [
 ]);
 
 ?>
-<div class="subscribe_box">
+<div class="subscribe_box" id="inschrijven">
     <div class="container">
         <div class="subscribe_box__inner">
             <img class="lazyload img-fluid subscribe_box__image" data-src="<?= $image['url']?>" alt="">

@@ -6,6 +6,10 @@ header {
     
         .site_logo {
             max-width: 200px;
+
+            @media (max-width: 425px){
+                max-width: 100px;
+            }
         }
 
         .menu-item {
@@ -78,6 +82,10 @@ header {
     .site-branding {
         &.landing-branding {
             margin: 0 auto;
+
+            @media (max-width: 425px){
+                margin: 0;
+            }
         }
     }
 }

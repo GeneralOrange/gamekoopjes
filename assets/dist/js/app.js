@@ -96,10 +96,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _base_background__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./base/background */ "./assets/js/base/background.js");
-/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/menu */ "./assets/js/components/menu.js");
-/* harmony import */ var _components_topbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/topbar */ "./assets/js/components/topbar.js");
-/* harmony import */ var _components_subscribe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/subscribe */ "./assets/js/components/subscribe.js");
+/* harmony import */ var _base_smoothscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base/smoothscroll */ "./assets/js/base/smoothscroll.js");
+/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/menu */ "./assets/js/components/menu.js");
+/* harmony import */ var _components_topbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/topbar */ "./assets/js/components/topbar.js");
+/* harmony import */ var _components_subscribe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/subscribe */ "./assets/js/components/subscribe.js");
 //Base
+
  //Components
 
 
@@ -144,6 +146,40 @@ new Background();
 
 /***/ }),
 
+/***/ "./assets/js/base/smoothscroll.js":
+/*!****************************************!*\
+  !*** ./assets/js/base/smoothscroll.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return smoothScroll; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var smoothScroll = function smoothScroll() {
+  _classCallCheck(this, smoothScroll);
+
+  var handleScrolls = function handleScrolls() {
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  };
+
+  return handleScrolls();
+};
+
+
+new smoothScroll();
+
+/***/ }),
+
 /***/ "./assets/js/components/banner.js":
 /*!****************************************!*\
   !*** ./assets/js/components/banner.js ***!
@@ -179,7 +215,7 @@ var Banner = function Banner() {
   };
 
   var animateText = function animateText() {
-    var banner = document.querySelector('.banner_content .col-md-6');
+    var banner = document.querySelector('.banner_content .col-lg-6');
     Array.from(banner.children).forEach(function (val, i) {
       setTimeout(function () {
         val.classList.add('toggled');

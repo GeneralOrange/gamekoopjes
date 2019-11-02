@@ -10,7 +10,7 @@ $image = get_field('banner_image');
 <div class="banner_content">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <h1 class="page-title"><?= $title ? $title : get_the_title(); ?></h1>
 
                 <?php if($subtitle): ?>
@@ -21,7 +21,7 @@ $image = get_field('banner_image');
 
                 <a class="button" href="<?= $button['url']; ?>"><?= $button['title']; ?></a>
             </div>
-            <div class="col-md-6 img_container">
+            <div class="col-lg-6 img_container">
                 <img class="lazyload side-img img-fluid" data-src="<?= $image['url']?>">    
             </div>
         </div>

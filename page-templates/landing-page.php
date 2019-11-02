@@ -20,6 +20,8 @@ get_header(); ?>
 
                 get_template_part( 'template-parts/components/content/dual_text');
 
+                get_template_part( 'template-parts/components/content/social_blocks');
+
                 get_template_part( 'template-parts/components/footer/landing_footer');
 
                 // If comments are open or we have at least one comment, load up the comment template.

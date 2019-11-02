@@ -29,7 +29,7 @@ export default class Banner {
 
         const animateText = () => {
             const
-            banner = document.querySelector('.banner_content .col-md-6');
+            banner = document.querySelector('.banner_content .col-lg-6');
 
             Array.from(banner.children).forEach((val, i) => {
                 setTimeout(()=> {

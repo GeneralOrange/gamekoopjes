@@ -11,9 +11,11 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <button>
-                        Inschrijven
-                    </button>
+                    <a href="#inschrijven">
+                        <button>
+                            Inschrijven
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>   
