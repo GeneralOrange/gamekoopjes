@@ -437,5 +437,30 @@ header .site-branding.landing-branding {
           clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
 
+.gfield:not(.hidden_label) {
+  position: relative;
+}
+
+.gfield:not(.hidden_label) label {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transform: translateY(0);
+  transition: all 0.3s;
+  font-size: 14px !important;
+  color: #acacac;
+}
+
+.gfield:not(.hidden_label) label.active {
+  left: 0;
+  transform: translateY(-35px);
+  color: #b5267b;
+  font-size: 16px !important;
+}
+
+.gfield:not(.hidden_label) input.active {
+  border-bottom: 2px solid #0db4b9;
+}
+
 
 /*# sourceMappingURL=style.css.map*/

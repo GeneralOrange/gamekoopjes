@@ -236,6 +236,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var Subscribe = function Subscribe() {
   _classCallCheck(this, Subscribe);
 
+  //Event handlers
   function handleToggleImage(e) {
     e.preventDefault();
     var complete = subscribe.complete.url,
@@ -248,12 +249,47 @@ var Subscribe = function Subscribe() {
     }
   }
 
+  function handleFocus(e) {
+    this.classList.add('active');
+    var el = this;
+
+    while (!el.classList.contains('gfield')) {
+      el = el.parentElement;
+    }
+
+    var asoLabel = el.querySelector('label');
+    asoLabel.classList.add('active');
+  }
+
+  function handleBlur(e) {
+    if (this.value.length < 1) {
+      this.classList.remove('active');
+      var el = this;
+
+      while (!el.classList.contains('gfield')) {
+        el = el.parentElement;
+      }
+
+      var asoLabel = el.querySelector('label');
+      asoLabel.classList.remove('active');
+    }
+  } //Main functions
+
+
   var handleImage = function handleImage() {
     var main_image = document.querySelector('.subscribe_box__image');
     return main_image.addEventListener('click', handleToggleImage);
   };
 
-  return handleImage();
+  var handleFloatingLabel = function handleFloatingLabel() {
+    var allInputs = document.querySelectorAll('input');
+    allInputs.forEach(function (input) {
+      input.addEventListener('focus', handleFocus);
+      input.addEventListener('blur', handleBlur);
+    });
+  };
+
+  return [handleImage(), handleFloatingLabel()];
 };
 
 
@@ -323,9 +359,9 @@ new TopBar();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\gamekoopjes\wp-content\themes\gamekoopjes\assets\js\app.js */"./assets/js/app.js");
-__webpack_require__(/*! C:\laragon\www\gamekoopjes\wp-content\themes\gamekoopjes\assets\sass\style.scss */"./assets/sass/style.scss");
-module.exports = __webpack_require__(/*! C:\laragon\www\gamekoopjes\wp-content\themes\gamekoopjes\assets\sass\vendor.scss */"./assets/sass/vendor.scss");
+__webpack_require__(/*! E:\Xampp\htdocs\wp-gamekoopjes\wp-content\themes\gamekoopjes\assets\js\app.js */"./assets/js/app.js");
+__webpack_require__(/*! E:\Xampp\htdocs\wp-gamekoopjes\wp-content\themes\gamekoopjes\assets\sass\style.scss */"./assets/sass/style.scss");
+module.exports = __webpack_require__(/*! E:\Xampp\htdocs\wp-gamekoopjes\wp-content\themes\gamekoopjes\assets\sass\vendor.scss */"./assets/sass/vendor.scss");
 
 
 /***/ })
