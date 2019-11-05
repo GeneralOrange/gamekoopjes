@@ -125,6 +125,8 @@ function gamekoopjes_scripts() {
 
 	wp_enqueue_script( 'gamekoopjes-vendorjs', get_template_directory_uri() . '/assets/dist/js/vendor.js', '','', true);
 	wp_enqueue_script( 'gamekoopjes-js', get_template_directory_uri() . '/assets/dist/js/app.js', '','', true);
+
+	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/8350343b19.js', '','', true);
 	
 
 	

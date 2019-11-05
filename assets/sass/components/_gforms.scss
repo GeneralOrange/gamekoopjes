@@ -1,25 +1,35 @@
 .gfield:not(.hidden_label) {
     position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+
     label {
         position: absolute;
         left: 5px;
-        top: 10px;
-        transform: translateY(0);
-        transition: all .3s;
-        font-size: 14px!important;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .3s ease-in-out;
+        font-size: 16px!important;
         color: nth($colors, 5);
 
         &.active {
             left: 0;
-            transform: translateY(-35px);
+            transform: translateY(-40px);
             color: nth($colors, 3);
-            font-size: 16px!important;
+            font-size: 18px!important;
         }
     }
 
-    input {
-        &.active {
-            border-bottom: 2px solid nth($colors, 1);
+    .ginput_container {
+        margin: 0!important;
+        input {
+            margin: 0!important;
+            &.active {
+                border-bottom: 2px solid nth($colors, 1);
+            }
         }
     }
+
+    
 }

@@ -10,7 +10,7 @@
                     <div class="title">
                         <h4>Wat is gamekoopjes?</h4>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    <p>Gamekoopjes is hét online platform voor het kopen van je games. Wij zorgen dat jij het beste overzicht hebt en de beste prijs betaald voor jouw favoriete game!</p>
                 </div>
                 <div class="col-md-6">
                     <div class="icon__container">
@@ -18,10 +18,10 @@
                     </div>
 
                     <div class="title">
-                        <h4>Lorum ipsum</h4>
+                        <h4>Nieuws</h4>
                     </div>
                     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    <p>Gamekoopjes helpt jou een keuze te maken, door leuke weetjes en nieuwtjes over jouw favoriete game te delen.</p>
                 </div>
             </div>
         </div>

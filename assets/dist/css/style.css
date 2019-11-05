@@ -320,7 +320,7 @@ header .site-branding.landing-branding {
 }
 
 .subscribe_box {
-  margin: 300px auto;
+  margin: 100px auto;
   background-size: auto;
   background-repeat: no-repeat;
 }
@@ -427,6 +427,10 @@ header .site-branding.landing-branding {
   font-size: 14px;
 }
 
+.dual_text {
+  padding: 100px 0;
+}
+
 .dual_text__inner {
   width: 80%;
   margin: 0 auto;
@@ -467,7 +471,7 @@ header .site-branding.landing-branding {
 }
 
 .landing_footer {
-  padding: 300px 0;
+  padding: 100px 0 300px;
   position: relative;
 }
 
@@ -536,31 +540,47 @@ header .site-branding.landing-branding {
 
 .gfield:not(.hidden_label) {
   position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .gfield:not(.hidden_label) label {
   position: absolute;
   left: 5px;
-  top: 10px;
-  transform: translateY(0);
-  transition: all 0.3s;
-  font-size: 14px !important;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  font-size: 16px !important;
   color: #acacac;
 }
 
 .gfield:not(.hidden_label) label.active {
   left: 0;
-  transform: translateY(-35px);
+  transform: translateY(-40px);
   color: #b5267b;
-  font-size: 16px !important;
+  font-size: 18px !important;
 }
 
-.gfield:not(.hidden_label) input.active {
+.gfield:not(.hidden_label) .ginput_container {
+  margin: 0 !important;
+}
+
+.gfield:not(.hidden_label) .ginput_container input {
+  margin: 0 !important;
+}
+
+.gfield:not(.hidden_label) .ginput_container input.active {
   border-bottom: 2px solid #0db4b9;
 }
 
 .social_blocks {
   margin: 100px auto;
+}
+
+.social_blocks__inner {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .social_blocks__link:hover {
@@ -594,6 +614,9 @@ header .site-branding.landing-branding {
 
 .social_blocks__icon {
   margin-bottom: 15px;
+  color: white;
+  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+  font-size: 80px;
 }
 
 .social_blocks__channel {
