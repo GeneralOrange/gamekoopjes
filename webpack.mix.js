@@ -45,8 +45,8 @@ mix.js('./assets/js/app.js', 'dist/js')
 .sourceMaps(true, 'source-map');
 
 mix.browserSync({
-    proxy: 'localhost/wp-gamekoopjes',
-    host: 'localhost',
+    proxy: 'gamekoopjes.test',
+    host: 'gamekoopjes.test',
     files: [
         './assets/dist/css/*.css',
         './*.php',

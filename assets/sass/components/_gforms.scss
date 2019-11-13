@@ -12,10 +12,11 @@
         transition: all .3s ease-in-out;
         font-size: 16px!important;
         color: nth($colors, 5);
+        z-index: 1;
 
         &.active {
             left: 0;
-            transform: translateY(-40px);
+            transform: translateY(-50px);
             color: nth($colors, 3);
             font-size: 18px!important;
         }

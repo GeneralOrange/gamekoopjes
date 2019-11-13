@@ -71,13 +71,76 @@
         padding-top:30px;
 
         input {
-            border-radius: 5px;
-            border: 1px solid #e0e0e0;
-            font-size:14px !important;            
+            border: 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size:14px !important;   
+            padding: 15px !important;
+            outline:none;
+            background-color: transparent;
+            position:relative;
+            z-index:1;         
         }
 
         label {
             font-size: 14px;
+        }
+
+        .ginput_container_consent {
+            position: relative;
+            padding-left:40px;
+            label {
+                &::after {
+                    content:"";
+                    background:#fff;
+                    width:27px;
+                    height:27px;
+                    display:block;
+                    position: absolute;
+                    left:0;
+                    top:0;
+                    border-radius:3px;
+                    z-index: 0;
+                    border:1px solid nth($colors, 2);
+                }
+                &::before {
+                    content:"";
+                    display:block;
+                    position: absolute;
+                    width: 6px;
+                    height: 15px;
+                    border: solid nth($colors, 2);
+                    border-width: 0 3px 3px 0;
+                    left: 9px;
+                    top: 4px;
+                    transform: rotate(45deg);
+                    opacity:0;
+                    z-index:1;
+                    transition:all 100ms;
+                }
+            }      
+        }
+
+        input[type="checkbox"] {
+            opacity:0;
+            outline:none;
+            z-index:100;
+            width:27px;
+            height:27px;
+            top:0;
+            left:0;
+            position: absolute;
+            appearance: none;
+            cursor: pointer;
+        + label {
+          cursor: pointer;
+        }
+            &:checked + label {
+                &:before {
+                    opacity:1;
+                    top: 5px;
+                    left: 10px;
+                }
+            }
         }
     }
 }
