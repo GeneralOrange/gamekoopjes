@@ -11,7 +11,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <a href="#" class="social_blocks__link" target="_blank">
+                    <a href="https://www.facebook.com/gamekoopjesnl/" class="social_blocks__link" target="_blank">
                         <div class="social_blocks__item">
                             <i class="fab fa-facebook-f social_blocks__icon"></i>
                             <h3 class="social_blocks__channel">@GAMEKOOPJES_NL</h3>
