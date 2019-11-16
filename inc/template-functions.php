@@ -128,3 +128,76 @@ add_filter( 'gform_submit_button_1', 'gk_change_form_button', 10, 2 );
 function gk_change_form_button( $button, $form ) {
     return "<button class='subscribe_box__button' id='gform_submit_button_{$form['id']}'><span>Inschrijven</span></button>";
 }
+
+// Register Custom Post Type games
+function games_post_type() {
+	$labels = array(
+		'name'                  => 'Games',
+		'singular_name'         => 'Game',
+	);
+	$args = array(
+		'label'                 => 'Game',
+		'description'           => 'Een overzicht van alle games.',
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'page-attributes' ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-video-alt3',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'rewrite'               => $rewrite,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'games', $args );
+}
+add_action( 'init', 'games_post_type', 0 );
+
+// Register Custom Taxonomy for games
+function categorie_games() {
+	$labels = array(
+		'name'                       => 'categorieen',
+		'singular_name'              => 'Categorie',
+		'menu_name'                  => 'Categorieen',
+		'all_items'                  => 'Alle categorieen',
+		'parent_item'                => 'Hoofd categorie',
+		'parent_item_colon'          => 'Categorie item',
+		'new_item_name'              => 'Nieuwe categorie',
+		'add_new_item'               => 'Categorie toevoegen',
+		'edit_item'                  => 'Categorie bewerken',
+		'update_item'                => 'Categorie updaten',
+		'view_item'                  => 'Bekijk categorie',
+		'separate_items_with_commas' => 'Separate items with commas',
+		'add_or_remove_items'        => 'Categorie toevoegen of verwijderen',
+		'choose_from_most_used'      => 'Kiezen uit meest gebruikt',
+		'popular_items'              => 'Populaire categorieen',
+		'search_items'               => 'Zoek categorie',
+		'not_found'                  => 'Niks gevonden',
+		'no_terms'                   => 'Geen categorie',
+		'items_list'                 => 'Categorie lijst',
+		'items_list_navigation'      => 'Catagorie lijst navigatie',
+	);
+	$rewrite = array(
+		'slug'                       => 'Games',
+		'with_front'                 => false,
+		'hierarchical'               => true,
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
+	);
+	register_taxonomy( 'gamescategorie', array( 'games' ), $args );
+}
+add_action( 'init', 'categorie_games', 0 );
