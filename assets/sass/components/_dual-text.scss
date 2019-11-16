@@ -1,5 +1,10 @@
 .dual_text {
     padding: 100px 0;
+
+    @media (max-width: 425px){
+        padding: 0;
+    }
+
     &__inner {
         width: 80%;
         margin: 0 auto;
