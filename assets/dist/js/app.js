@@ -395,9 +395,9 @@ new TopBar();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\gamekoopjes\wp-content\themes\gamekoopjes\assets\js\app.js */"./assets/js/app.js");
-__webpack_require__(/*! C:\laragon\www\gamekoopjes\wp-content\themes\gamekoopjes\assets\sass\style.scss */"./assets/sass/style.scss");
-module.exports = __webpack_require__(/*! C:\laragon\www\gamekoopjes\wp-content\themes\gamekoopjes\assets\sass\vendor.scss */"./assets/sass/vendor.scss");
+__webpack_require__(/*! E:\Xampp\htdocs\wp-gamekoopjes\wp-content\themes\gamekoopjes\assets\js\app.js */"./assets/js/app.js");
+__webpack_require__(/*! E:\Xampp\htdocs\wp-gamekoopjes\wp-content\themes\gamekoopjes\assets\sass\style.scss */"./assets/sass/style.scss");
+module.exports = __webpack_require__(/*! E:\Xampp\htdocs\wp-gamekoopjes\wp-content\themes\gamekoopjes\assets\sass\vendor.scss */"./assets/sass/vendor.scss");
 
 
 /***/ })

@@ -18,6 +18,10 @@ body,html {
                 top: 1500px;
                 right: 0;
             }
+
+            @media (max-width: 425px){
+                display: none;
+            }
         }
     }
 

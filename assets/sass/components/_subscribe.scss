@@ -16,7 +16,7 @@
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
 
-        @media (max-width: 768px){
+        @media (max-width: 812px){
             display: none;
         }
     }
@@ -32,7 +32,7 @@
         padding: 40px;
         padding-left: 350px;
 
-        @media (max-width: 768px){
+        @media (max-width: 812px){
             padding-left: unset;
             padding: 15px;
             min-height: unset;

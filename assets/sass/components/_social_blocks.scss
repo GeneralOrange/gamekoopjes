@@ -61,5 +61,11 @@
         background-image: linear-gradient(to right, nth($gradients, 1)), linear-gradient(to top, nth($gradients, 1));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @media (max-width: 1024px){
+            font: {
+                size: 20px;
+            }
+        }
     }
 }

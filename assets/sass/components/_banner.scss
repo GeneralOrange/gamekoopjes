@@ -61,11 +61,7 @@
                 transform: translateX(0%);
 
                 @media (max-width: 425px){
-                    position: absolute;
-                    right: -140px;
-                    top: -200px;
-                    z-index: -1;
-                    opacity: .2;
+                    display: none;
                 }
 
             }
