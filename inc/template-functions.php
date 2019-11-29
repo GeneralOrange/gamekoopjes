@@ -84,36 +84,39 @@ function get_favicon() {
 }
 
 function landing_page_redirect(){
-	//Get pages with landing page template attached
-	$lpages = get_pages([
-		'meta_key' => '_wp_page_template',
-		'meta_value' => 'page-templates/landing-page.php'
-	]);
 
-	//Init variable
-	$dpages = [];
+	if(!is_user_logged_in()):
+		//Get pages with landing page template attached
+		$lpages = get_pages([
+			'meta_key' => '_wp_page_template',
+			'meta_value' => 'page-templates/landing-page.php'
+		]);
 
-	//Loop through found pages
-	foreach($lpages as $item):
-		//Get ACF field
-		$redirect = get_field('force_site_redirection', $item);
+		//Init variable
+		$dpages = [];
 
-		//Check ACF field
-		if($redirect):
-			$dpages[] = $item;
-		endif;
+		//Loop through found pages
+		foreach($lpages as $item):
+			//Get ACF field
+			$redirect = get_field('force_site_redirection', $item);
 
-	endforeach;
+			//Check ACF field
+			if($redirect):
+				$dpages[] = $item;
+			endif;
 
-	$current_page = get_the_permalink($post->ID);
+		endforeach;
 
-	//Only get first record since there should only be 1 redirecting
-	if($dpages[0]):
-		$link = get_the_permalink($dpages[0]);
+		$current_page = get_the_permalink($post->ID);
 
-		if($current_page !== $link):
-			//Handle redirect
-			wp_redirect($link, 307);
+		//Only get first record since there should only be 1 redirecting
+		if($dpages[0]):
+			$link = get_the_permalink($dpages[0]);
+
+			if($current_page !== $link):
+				//Handle redirect
+				wp_redirect($link, 307);
+			endif;
 		endif;
 	endif;
 }
@@ -139,7 +142,7 @@ function games_post_type() {
 		'label'                 => 'Game',
 		'description'           => 'Een overzicht van alle games.',
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'page-attributes' ),
+		'supports'              => array( 'title', 'editor', 'page-attributes', 'thumbnail'),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
