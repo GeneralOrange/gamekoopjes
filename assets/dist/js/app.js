@@ -100,9 +100,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/menu */ "./assets/js/components/menu.js");
 /* harmony import */ var _components_topbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/topbar */ "./assets/js/components/topbar.js");
 /* harmony import */ var _components_subscribe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/subscribe */ "./assets/js/components/subscribe.js");
+/* harmony import */ var _components_game_media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/game-media */ "./assets/js/components/game-media.js");
 //Base
 
  //Components
+
 
 
 
@@ -126,7 +128,13 @@ var Background = function Background() {
   _classCallCheck(this, Background);
 
   var handleBackground = function handleBackground() {
-    var main = document.querySelector('#main');
+    var main = document.querySelector('#main'),
+        landingpage = document.querySelector('.subscribe_box');
+
+    if (!landingpage) {
+      return;
+    }
+
     var controller, i, src_arr;
     src_arr = [background.controller, background.controller_2];
 
@@ -199,6 +207,11 @@ var Banner = function Banner() {
     var navBar = document.querySelector('#site-navigation'),
         overlay = navBar.querySelector('.overlay'),
         overlay_2 = navBar.querySelector('.overlay_2');
+
+    if (!overlay) {
+      return;
+    }
+
     var layers = [overlay, overlay_2];
     layers.forEach(function (val, i) {
       setTimeout(function () {
@@ -209,6 +222,11 @@ var Banner = function Banner() {
 
   var animateBannerImage = function animateBannerImage() {
     var image = document.querySelector('.side-img');
+
+    if (!image) {
+      return;
+    }
+
     setTimeout(function () {
       image.classList.add('toggled');
     }, 600);
@@ -216,6 +234,11 @@ var Banner = function Banner() {
 
   var animateText = function animateText() {
     var banner = document.querySelector('.banner_content .col-lg-6');
+
+    if (!banner) {
+      return;
+    }
+
     Array.from(banner.children).forEach(function (val, i) {
       setTimeout(function () {
         val.classList.add('toggled');
@@ -227,6 +250,58 @@ var Banner = function Banner() {
 };
 
 
+
+/***/ }),
+
+/***/ "./assets/js/components/game-media.js":
+/*!********************************************!*\
+  !*** ./assets/js/components/game-media.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return GameMedia; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var GameMedia = function GameMedia() {
+  _classCallCheck(this, GameMedia);
+
+  var gamemedia = document.querySelector('.game-media');
+
+  if (!gamemedia) {
+    return;
+  }
+
+  function handleLightbox() {
+    var newEl = document.createElement('div'),
+        newImg = document.createElement('img'),
+        newClose = document.createElement('div');
+    newEl.classList.add('game-media__lightbox');
+    newImg.src = this.querySelector('img').src;
+    newClose.classList.add('game-media__lightbox-close');
+    newEl.appendChild(newClose);
+    newEl.appendChild(newImg);
+    gamemedia.appendChild(newEl);
+    newClose.addEventListener('click', removeLightbox);
+  }
+
+  function removeLightbox() {
+    document.querySelector('.game-media__lightbox').remove();
+  }
+
+  var initLightbox = function initLightbox() {
+    Array.from(gamemedia.children).forEach(function (item) {
+      item.addEventListener('click', handleLightbox);
+    });
+  };
+
+  return initLightbox();
+};
+
+
+new GameMedia();
 
 /***/ }),
 
@@ -314,11 +389,21 @@ var Subscribe = function Subscribe() {
 
   var handleImage = function handleImage() {
     var main_image = document.querySelector('.subscribe_box__image');
+
+    if (!main_image) {
+      return;
+    }
+
     return main_image.addEventListener('click', handleToggleImage);
   };
 
   var handleFloatingLabel = function handleFloatingLabel() {
     var allInputs = document.querySelectorAll('input');
+
+    if (!allInputs) {
+      return;
+    }
+
     allInputs.forEach(function (input) {
       input.addEventListener('focus', handleFocus);
       input.addEventListener('blur', handleBlur);

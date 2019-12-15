@@ -9,9 +9,14 @@
         <?php
     endif;
 ?>
-<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg">
-    <div class="overlay"></div>
-    <div class="overlay_2"></div>
+<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg <?= is_singular('games') ? 'game_nav' : '';?>">
+    <?php
+        if(is_page_template('page-templates/landing-page.php') || is_home() || is_front_page()):
+            echo '<div class="overlay"></div>
+            <div class="overlay_2"></div>';
+        endif;
+    ?>
+    
     <div class="container">
 
         <div class="site-branding <?= is_page_template('page-templates/landing-page.php') ? 'landing-branding' : '';?>">

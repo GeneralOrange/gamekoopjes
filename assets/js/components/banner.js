@@ -6,6 +6,10 @@ export default class Banner {
             overlay = navBar.querySelector('.overlay'),
             overlay_2 = navBar.querySelector('.overlay_2');
 
+            if(!overlay){
+                return;
+            }
+
             let layers = [
                 overlay,
                 overlay_2
@@ -22,6 +26,10 @@ export default class Banner {
             const
             image = document.querySelector('.side-img');
 
+            if(!image){
+                return;
+            }
+
             setTimeout(()=> {
                 image.classList.add('toggled');
             }, 600);
@@ -30,6 +38,10 @@ export default class Banner {
         const animateText = () => {
             const
             banner = document.querySelector('.banner_content .col-lg-6');
+
+            if(!banner){
+                return;
+            }
 
             Array.from(banner.children).forEach((val, i) => {
                 setTimeout(()=> {

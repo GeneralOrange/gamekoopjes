@@ -6,3 +6,4 @@ import smoothScroll from './base/smoothscroll';
 import Menu from './components/menu';
 import TopBar from './components/topbar';
 import Subscribe from './components/subscribe';
+import GameMedia from './components/game-media';

@@ -53,12 +53,20 @@ export default class Subscribe {
             const
             main_image = document.querySelector('.subscribe_box__image');
 
+            if(!main_image){
+                return;
+            }
+
             return main_image.addEventListener('click', handleToggleImage);
         }
 
         const handleFloatingLabel = () => {
             const 
             allInputs = document.querySelectorAll('input');
+
+            if(!allInputs){
+                return;
+            }
 
             allInputs.forEach(input => {
                 input.addEventListener('focus', handleFocus);

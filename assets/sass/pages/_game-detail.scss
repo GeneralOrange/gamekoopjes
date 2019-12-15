@@ -1,0 +1,9 @@
+article.type-games {
+    @media all and (min-width: 768px){
+        border-right: 1px solid gray;
+        padding-right: 35px;
+    }
+
+    @include game_offers;
+    @include game_media;
+}

@@ -12,6 +12,7 @@
 
 //Layout
 @import './layout/header';
+@import './layout/footer';
 
 //Components
 @import './components/navbar';
@@ -21,4 +22,7 @@
 @import './components/landing_footer';
 @import './components/gforms';
 @import './components/social_blocks';
+
+//Pages
+@import './pages/game-detail';
 

@@ -126,6 +126,81 @@ function bdi($extend = NULL) {
 	return get_bloginfo('stylesheet_directory').'/assets/dist/images/'.$extend;
 }
 
+//Function for getting gameoffers
+function get_game_offers($post_id = NULL){
+	if($post_id === NULL):
+		$post_id = get_the_ID();
+	endif;
+
+	$offers = get_field('game_offers', $post_id);
+	$lowest_price = get_field('lowest_price', $post_id);
+
+	$output = "";
+	
+
+	if($offers):
+		$output .= "<div class='game-offers'>";
+		foreach($offers as $item):
+			if($item['enabled']):
+				$best_deal = "";
+
+				if($lowest_price && $lowest_price == $item['price']):
+					$best_deal = 'best-deal';
+				endif;
+				
+				$output .= "
+					<div class='game-offers__single {$best_deal}'>
+						<div class='game-offers__front'>
+							<div class='game-offers__seller'>
+								{$item['seller']}
+							</div>
+							<div class='game-offers__price'>
+								{$item['price']} 
+							</div>
+						</div>
+						<div class='game-offers__back'>
+							<a href='{$item['affiliate_link']}' target='_blank' rel='nofollow' class='game-offers__button'>
+								Koop nu
+							</a>
+						</div>
+						
+					</div>
+				";
+			endif;
+		endforeach;
+		$output .= '</div>';
+	else:
+		$output .= "Geen data om weer te geven";
+	endif;
+
+	return $output;
+}
+
+function get_game_media($post_id = NULL) {
+	if($post_id === NULL):
+		$post_id = get_the_ID();
+	endif;
+
+	$media = get_field('media', $post_id);
+
+	$output = "<div class='game-media'>";
+
+	if($media):
+		foreach($media as $item):
+			$image = $item['image'];
+			$output .= "
+				<div class='game-media__single'>
+					<img data-src='{$image['url']}' alt='{$image['title']}' class='lazyload game-media__image'>
+				</div>
+			";
+		endforeach;
+	endif;
+
+	$output .= "</div>";
+
+	return $output;
+}
+
 
 add_filter( 'gform_submit_button_1', 'gk_change_form_button', 10, 2 );
 function gk_change_form_button( $button, $form ) {
@@ -204,3 +279,50 @@ function categorie_games() {
 	register_taxonomy( 'gamescategorie', array( 'games' ), $args );
 }
 add_action( 'init', 'categorie_games', 0 );
+
+//Register wigdets
+function register_footer_widgets(){
+	register_sidebar(
+		array(
+		'name' => 'Footer 1',
+		'id' => 'footer-1',
+		'before_widget' => '<div class = "footerwidget_1">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+		'name' => 'Footer 2',
+		'id' => 'footer-2',
+		'before_widget' => '<div class = "footerwidget_2">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+		'name' => 'Footer 3',
+		'id' => 'footer-3',
+		'before_widget' => '<div class = "footerwidget_3">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+		'name' => 'Footer 4',
+		'id' => 'footer-4',
+		'before_widget' => '<div class = "footerwidget_4">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+		)
+	);
+}
+
+add_action('widgets_init', 'register_footer_widgets', 0);
+

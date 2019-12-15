@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* lazyload animation */
 
 .lazyload,
@@ -87,6 +89,11 @@ html {
   overflow-x: hidden;
 }
 
+body #main,
+html #main {
+  padding: 50px 0;
+}
+
 body #main .background_controller,
 html #main .background_controller {
   position: absolute;
@@ -121,6 +128,12 @@ html #main .background_controller:last-of-type {
   }
 }
 
+.site-footer {
+  background-color: #1d1045;
+  color: white;
+  padding: 50px 0;
+}
+
 header nav {
   background-color: transparent;
 }
@@ -141,6 +154,10 @@ header nav .menu-item {
 
 header nav .menu-item .nav-link {
   color: white;
+}
+
+header .game_nav {
+  background-image: linear-gradient(45deg, #0db4b9, #1d1045);
 }
 
 header .topbar {
@@ -750,6 +767,147 @@ header .site-branding.landing-branding {
   .social_blocks__channel {
     font-size: 20px;
   }
+}
+
+@media all and (min-width: 768px) {
+  article.type-games {
+    border-right: 1px solid gray;
+    padding-right: 35px;
+  }
+}
+
+article.type-games .game-offers__single {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #1d1045;
+  margin-bottom: 5px;
+  transition-property: background-color;
+  transition-timing-function: ease;
+  transition-duration: 300ms;
+}
+
+article.type-games .game-offers__single.best-deal:after {
+  content: "Best Deal!";
+  position: absolute;
+  left: 70px;
+  bottom: 10px;
+  background-color: #ce3095;
+  padding: 5px;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 900;
+  color: white;
+  border-radius: 15px;
+}
+
+article.type-games .game-offers__single:hover {
+  background-color: #eeeeee;
+}
+
+article.type-games .game-offers__single:hover .game-offers__seller {
+  color: #ce3095;
+}
+
+article.type-games .game-offers__single:hover .game-offers__price {
+  color: black;
+}
+
+article.type-games .game-offers__single:hover .game-offers__button {
+  background-color: #ce3095;
+}
+
+article.type-games .game-offers__seller {
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+article.type-games .game-offers__price {
+  color: white;
+}
+
+article.type-games .game-offers__button {
+  background-color: #0db4b9;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px 45px;
+  transition: all 0.3s;
+  display: inline-block;
+  letter-spacing: 2px;
+  font-size: 14px;
+  border: 0;
+}
+
+article.type-games .game-offers__button:hover {
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+  transform: scale(0.95);
+}
+
+article.type-games .game-media {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+article.type-games .game-media__single {
+  overflow: hidden;
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  transition-property: transform, border;
+  transition-timing-function: ease;
+  transition-duration: 300ms;
+}
+
+article.type-games .game-media__single:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 4px solid #0db4b9;
+}
+
+article.type-games .game-media__single img {
+  pointer-events: none;
+}
+
+article.type-games .game-media__lightbox {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article.type-games .game-media__lightbox-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+article.type-games .game-media__lightbox-close:hover {
+  cursor: pointer;
+}
+
+article.type-games .game-media__lightbox-close:after {
+  content: "\F00D";
+  font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 30px;
+  color: white;
 }
 
 

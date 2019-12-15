@@ -18,3 +18,145 @@
         transform: scale(.95);
     }
 }
+
+@mixin game_offers() {
+    .game-offers {
+        &__single {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: nth($colors, 8);
+            margin-bottom: 5px;
+            transition: {
+                property: background-color;
+                timing-function: ease;
+                duration: 300ms;
+            }
+            
+            &.best-deal {
+                
+                &:after {
+                    content: 'Best Deal!';
+                    position: absolute;
+                    left: 70px;
+                    bottom: 10px;
+                    background-color: nth($colors, 2);
+                    padding: 5px;
+                    line-height: 1;
+                    
+                    font: {
+                        size: 14px;
+                        weight: 900;
+                    }
+
+                    color: white;
+                    border-radius: 15px;
+                    //transform: rotate(25deg);
+                }
+            }
+
+            &:hover {
+                background-color: nth($colors, 6);
+                
+                .game-offers {
+                    &__seller {
+                        color: nth($colors, 2);
+                    }
+
+                    &__price {
+                        color: black;
+                    }
+
+                    &__button {
+                        background-color: nth($colors, 2);
+                    }
+                }
+            }
+        }
+
+        &__seller {
+            color: white;
+            font: {
+                size: 20px;
+                weight: 900;
+            }
+        }
+
+        &__price {
+            color: white;
+        }
+
+        &__button {
+            @include button;
+        }
+    }
+}
+
+@mixin game_media {
+    .game-media {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &__single {
+            overflow: hidden;
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            //border: 1px solid transparent;
+            transition: {
+                property: transform, border;
+                timing-function: ease;
+                duration: 300ms;
+            };
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                border: 4px solid nth($colors, 1);
+            }
+            
+            img {
+                pointer-events: none;
+            }
+        }
+
+        &__lightbox {
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__lightbox-close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:after {
+                content: '\f00d';
+                font: {
+                    family: 'Font Awesome 5 Pro', 'Font Awesome 5 Free';
+                    weight: 600;
+                    size: 30px;
+                }
+
+                color: white;
+            }
+        }
+    }
+}

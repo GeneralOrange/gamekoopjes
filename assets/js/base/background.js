@@ -2,7 +2,12 @@ export default class Background {
     constructor() {
         const handleBackground = () => {
             const
-            main = document.querySelector('#main');
+            main = document.querySelector('#main'),
+            landingpage = document.querySelector('.subscribe_box');
+
+            if(!landingpage){
+                return;
+            }
 
             let
             controller,
