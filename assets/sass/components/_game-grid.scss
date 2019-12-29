@@ -1,0 +1,31 @@
+.game-grid {
+    &__search {
+        padding: 5px;
+        margin: 15px 0;
+
+        input {
+            display: inline;
+            border: 0;
+            border-bottom: 3px solid nth($colors, 1);
+            height: 30px;
+
+            &:hover, &:focus {
+                background-color: nth($colors, 6);
+            }
+        }
+
+        .search_button {
+            display: inline;
+            height: 30px;
+            background-color: nth($colors, 1);
+            border: 0;
+            color: white;
+            font: {
+                
+                weight: 600;
+            }
+        }
+    }
+
+    @include single-game;
+}

@@ -9,7 +9,7 @@
         <?php
     endif;
 ?>
-<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg <?= is_singular('games') ? 'game_nav' : '';?>">
+<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg <?= is_page_template('page-templates/landing-page.php') || is_home() || is_front_page() ? '' : 'default_nav';?>">
     <?php
         if(is_page_template('page-templates/landing-page.php') || is_home() || is_front_page()):
             echo '<div class="overlay"></div>

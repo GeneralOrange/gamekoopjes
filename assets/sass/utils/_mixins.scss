@@ -160,3 +160,129 @@
         }
     }
 }
+
+@mixin single-game {
+    .game {
+        min-width: 180px;
+        max-width: 180px;
+        max-height: 220px;
+        min-height: 220px;
+        position: relative;
+        border-radius: 6px;
+        margin-bottom: 30px;
+        transition: {
+            property: filter;
+            timing-function: ease;
+            duration: 300ms;
+        };
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 3px 3px 24px 0px rgba(0,0,0,0.75);
+
+            .game {
+                &__thumb {
+                    filter: brightness(75%);
+                }
+    
+                &__details {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            
+        }
+
+        &__thumb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 6px;
+            z-index: -1;
+        }
+
+        &__details {
+            position: absolute;
+            opacity: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            transform: translateY(100%);
+            padding: 5px;
+            border-top: 3px solid nth($colors, 1);
+            transition: {
+                property: transform, opacity;
+                duration: 300ms;
+                timing-function: ease;
+            };
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__title {
+            width: 100%;
+            color: nth($colors, 1);
+            font: {
+                size: 15px;
+                weight: 900;
+            };
+        }
+
+        &__price {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font: {
+                size: 12px;
+                weight: bolder;
+            }
+            color: nth($colors, 2);
+        }
+
+        &__cat {
+            display: flex;
+            width: 100%;
+
+            &--item {
+                color: white;
+                font: {
+                    size: 10px;
+                    
+                }
+                padding: 5px;
+                margin-right: 2px;
+                background-color: nth($colors, 2);
+                line-height: 1;
+            }
+        }
+
+        &__links {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        &__button {
+            padding: 5px;
+            line-height: 1;
+            font: {
+                size: 15px;
+            }
+            color: white;
+            border-radius: 6px;
+
+            &--pink {
+                background-color: nth($colors, 2);
+            }
+
+            &--blue {
+                background-color: nth($colors, 1);
+            }
+        }
+    }
+}

@@ -54,11 +54,13 @@
                     ?>
                 </div><!-- .entry-content -->
                 <div class="entry-offers">
+                    <h2>Aanbiedingen</h2>
                     <?php
                         echo get_game_offers($post->ID);
                     ?>
                 </div>
                 <div class="entry-media">
+                    <h2>Media</h2>
                     <?php echo get_game_media($post->ID); ?>
                 </div>
             </article>

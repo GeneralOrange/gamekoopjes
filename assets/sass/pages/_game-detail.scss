@@ -6,4 +6,8 @@ article.type-games {
 
     @include game_offers;
     @include game_media;
+
+    .entry-offers, .entry-media {
+        margin-top: 1rem;
+    }
 }

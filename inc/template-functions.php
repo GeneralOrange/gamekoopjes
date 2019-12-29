@@ -148,7 +148,7 @@ function get_game_offers($post_id = NULL){
 					$best_deal = 'best-deal';
 				endif;
 				
-				$output .= "
+				$output .= <<< GAMESINGLE
 					<div class='game-offers__single {$best_deal}'>
 						<div class='game-offers__front'>
 							<div class='game-offers__seller'>
@@ -165,7 +165,7 @@ function get_game_offers($post_id = NULL){
 						</div>
 						
 					</div>
-				";
+				GAMESINGLE;
 			endif;
 		endforeach;
 		$output .= '</div>';
@@ -188,17 +188,78 @@ function get_game_media($post_id = NULL) {
 	if($media):
 		foreach($media as $item):
 			$image = $item['image'];
-			$output .= "
+			$output .= <<< MEDIASINGLE
 				<div class='game-media__single'>
 					<img data-src='{$image['url']}' alt='{$image['title']}' class='lazyload game-media__image'>
 				</div>
-			";
+			MEDIASINGLE;
 		endforeach;
 	endif;
 
 	$output .= "</div>";
 
 	return $output;
+}
+
+//Function for getting games
+
+function get_games($games = NULL){
+	if($games):
+
+		$output = '';
+		foreach($games as $item):
+			$game_link = get_the_permalink($item);
+			$affiliate_link = get_field('game_offers', $item)[0]['affiliate_link'] ? get_field('game_offers', $item)[0]['affiliate_link'] : '#';
+
+			$game_img = get_the_post_thumbnail_url($item);
+			$game_price = get_field('lowest_price', $item);
+			$categories = get_the_terms($item, 'gamescategorie');
+
+			$game_cats = '';
+
+			foreach($categories as $cat_item):
+				$game_cats .= <<< GAMECAT
+					<div class="game__cat--item">
+						{$cat_item->name}
+					</div>
+				GAMECAT;
+			endforeach;
+
+			//var_dump($item);
+
+			$output .= <<< SINGLEGAME
+				<div class="col-lg-2">
+					<div class="game">
+						<img data-src="{$game_img}" alt="{$item->post_title}" class="lazyload img-fluid game__thumb">
+						<div class="game__details">
+							<div class="game__title">
+								{$item->post_title}
+							</div>
+							<div class="game__price">
+								{$game_price}
+							</div>
+							<div class="game__cat">
+								{$game_cats}
+							</div>
+							<div class="game__links">
+								<a class="game__button game__button--blue" href="{$game_link}">
+									Meer info
+								</a>
+								<a class="game__button game__button--pink" href="{$affiliate_link}" rel="nofollow" target="_blank">
+									Nu kopen
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			SINGLEGAME;
+
+		endforeach;
+
+		return $output;
+	endif;
+
+	return;
 }
 
 
