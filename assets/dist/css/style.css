@@ -823,6 +823,7 @@ header .site-branding.landing-branding {
 .game-grid .game:hover .game__details {
   transform: translateY(0);
   opacity: 1;
+  pointer-events: all;
 }
 
 .game-grid .game__thumb {
@@ -835,6 +836,7 @@ header .site-branding.landing-branding {
 
 .game-grid .game__details {
   position: absolute;
+  pointer-events: none;
   opacity: 0;
   bottom: 0;
   left: 0;
