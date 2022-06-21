@@ -291,7 +291,6 @@ function games_post_type() {
 		'has_archive'           => false,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
-		'rewrite'               => $rewrite,
 		'capability_type'       => 'page',
 	);
 	register_post_type( 'games', $args );

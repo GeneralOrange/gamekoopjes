@@ -71,18 +71,6 @@ function WP_Starter_register_required_plugins() {
 			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
-		
-		array(
-			'name'               => 'ACF Theme Code Pro', // The plugin name.
-			'slug'               => 'acf-theme-code-pro', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/plugins/acf-theme-code-pro.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-        ),
         
         array(
 			'name'               => 'Facet WP', // The plugin name.
@@ -95,19 +83,19 @@ function WP_Starter_register_required_plugins() {
 			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
         ),
-        
-        array(
-			'name'               => 'Facet WP Load More Plugin', // The plugin name.
-			'slug'               => 'facetwp-load-more', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/plugins/facetwp-load-more.zip', // The plugin source.
+
+		array(
+			'name'               => 'Gravity Forms', // The plugin name.
+			'slug'               => 'gravity-forms', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/gravityforms_2.6.3.3.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-		),
-
+        ),
+        
 		array(
 			'name'               => 'WP Rocket', // The plugin name.
 			'slug'               => 'wp-rocket', // The plugin slug (typically the folder name).
@@ -144,30 +132,6 @@ function WP_Starter_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 
-		array(
-			'name'               => 'WPFomify', // The plugin name.
-			'slug'               => 'wpfomify', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/plugins/wpfomify.zip', // The plugin source.
-			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-		),
-
-		array(
-			'name'               => 'WPFomify - Mailchimp Addon', // The plugin name.
-			'slug'               => 'wpfomify-mailchimp', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/plugins/wpfomify-mailchimp.zip', // The plugin source.
-			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-		),
-
 		// This is an example of how to include a plugin from a GitHub repository in your theme.
 		// This presumes that the plugin code is based in the root of the GitHub repository
 		// and not in a subdirectory ('/src') of the repository.
@@ -183,14 +147,6 @@ function WP_Starter_register_required_plugins() {
 			'name'      => 'WP Sync DB Media Files',
 			'slug'      => 'wp-sync-db-media-files',
 			'source'    => 'https://github.com/wp-sync-db/wp-sync-db-media-files/archive/master.zip',
-			'required'          => false,
-            'force_activation'  => false,
-		),
-
-		array(
-			'name'      => 'GitHub Updater',
-			'slug'      => 'github-updater',
-			'source'    => 'https://github.com/afragen/github-updater/archive/master.zip',
 			'required'          => false,
             'force_activation'  => false,
 		),
@@ -223,57 +179,6 @@ function WP_Starter_register_required_plugins() {
             'required'          => true,
             'force_activation'  => true,
 		),
-
-		array(
-			'name'              => 'Contact Form 7',
-			'slug'              => 'contact-form-7',
-            'required'          => true,
-            'force_activation'  => true,
-		),
-		
-		array(
-			'name'              => 'ManageWP Worker',
-			'slug'              => 'worker',
-            'required'          => false,
-            'force_activation'  => false,
-		),
-		
-		array(
-			'name'              => 'OneSignal – Web Push Notifications',
-			'slug'              => 'onesignal-free-web-push-notifications',
-            'required'          => false,
-            'force_activation'  => false,
-		),
-		
-		array(
-			'name'              => 'Cloudflare - Wordpress Plugin',
-			'slug'              => 'cloudflare',
-            'required'          => false,
-            'force_activation'  => false,
-		),
-		
-		array(
-			'name'              => 'Akismet Anti-Spam',
-			'slug'              => 'akismet',
-            'required'          => false,
-            'force_activation'  => false,
-		),
-		
-		array(
-			'name'              => 'Disqus Comment System',
-			'slug'              => 'disqus-comment-system',
-            'required'          => false,
-            'force_activation'  => false,
-		),
-		
-		array(
-			'name'              => 'WP Limit Login Attempts',
-			'slug'              => 'wp-limit-login-attempts',
-            'required'          => false,
-            'force_activation'  => false,
-        ),
-
-
 	);
 
 	/*
